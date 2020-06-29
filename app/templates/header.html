@@ -1,0 +1,33 @@
+<ul>
+	<li>
+		<a href="{{ url_for('films.list') }}">
+			films
+		</a>
+	</li>
+	<li>
+		<a href="{{ url_for('index.root') }}">
+			home
+		</a>
+	</li>
+	{% if g.user == 'admin' %}
+	<li>
+		<a href="{{ url_for('films.new') }}">
+			Add film
+		</a>
+	</li>
+	{% endif %}
+	
+	{% if g.user == None%}
+	<li>
+		<a href="{{ url_for('auth.login') }}">
+			login
+		</a>
+	</li>
+	{% else %}
+	<li>
+		<a href="{{ url_for('auth.logout') }}">
+			logout
+		</a>
+	</li>
+	{% endif%}
+</ul>

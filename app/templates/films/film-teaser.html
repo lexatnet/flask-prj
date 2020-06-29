@@ -1,0 +1,14 @@
+<div class='film list-group-item'>
+	<div class='title'>
+		<a href="{{ url_for('films.details', id=id) }}">
+			{{ film['name']}}
+		</a>
+	</div>
+	<div class='tags'>
+		<ul>
+		{% for tag in film['tags'] %}
+			<li>{{ tag }}</li>
+		{% endfor %}
+		</ul>
+	</div>
+</div>

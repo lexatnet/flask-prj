@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	List of films
+{%endblock%}
+
+
+{% block content %}
+	<div class='films-list list-group'>
+	{% for film in films %}
+		{% set id = loop.index %}
+		{% include "films/film-teaser.html" %}
+	{% endfor %}
+	</div>
+{% endblock %}

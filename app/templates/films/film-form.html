@@ -1,0 +1,20 @@
+<form method='POST' action='{{ url_for('films.new') }}' enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="film-name">Name of film:</label>
+    <input type='text' name='name' class="form-control" id="film-name">
+  </div>
+  <div class="form-group">
+    <label for="film-tags">Film tags:</label>
+    <input type='text' name='tags' class="form-control" id="film-tags">
+  </div>
+  <div class="form-group">
+    <label for="film-description">Description</label>
+    <textarea class="form-control" name='description' id='film-description'>
+	</textarea>
+  </div>
+  <div class="form-group">
+    <label for="film-image">Image:</label>
+    <input type='file' name='film-image' class="form-control" id="film-image">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

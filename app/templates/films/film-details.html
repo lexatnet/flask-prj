@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+	{{ film['name'] }}
+{%endblock%}
+
+{% block content %}
+<div class='film list-group-item'>
+	<img src="{{ url_for('static', filename = film['image']) }}"/>
+	<div class='tags'>
+		<ul>
+		{% for tag in film['tags'] %}
+			<li>{{ tag }}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class='desc'>
+		{{film['description']}}
+	</div>
+</div>
+{%endblock%}
